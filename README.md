@@ -1,1 +1,1 @@
-# Mail Application
+# Mall Application
