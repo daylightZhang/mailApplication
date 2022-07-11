@@ -8,7 +8,12 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:mappers/*.xml
 logging:
   pattern:
     console: "[%thread] %-5level %logger{36} - %msg%n"
+server:
+  servlet:
+    session:
+      timeout: 120

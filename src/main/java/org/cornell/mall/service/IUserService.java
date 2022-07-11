@@ -1,6 +1,7 @@
 package org.cornell.mall.service;
 
 import org.cornell.mall.pojo.User;
+import org.cornell.mall.vo.ResponseVo;
 
 public interface IUserService {
     /**
@@ -8,5 +9,6 @@ public interface IUserService {
      * 1.注册功能
      * 2.登录功能
      */
-    void register(User user);
+    ResponseVo<User> register(User user);
+    ResponseVo<User> login(String username, String password);
 }

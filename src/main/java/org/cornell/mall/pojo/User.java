@@ -26,6 +26,8 @@ public class User {
 
     private Date updateTime;
 
+    public User(){}
+
     public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
