@@ -36,7 +36,7 @@ public class UserController {
     @PostMapping("/user/login")
     public ResponseVo<User> login(@Valid @RequestBody UserLoginForm userLoginForm,
                                   HttpSession httpSession){
-        ResponseVo<User> userResponseVo = userService.login(userLoginForm.getUsername(), userLoginForm.getUsername());
+        ResponseVo<User> userResponseVo = userService.login(userLoginForm.getUsername(), userLoginForm.getPassword());
         // 设置session
         httpSession.setAttribute(CURRENT_USER, userResponseVo.getData());
         log.info("/user/login sessionId={}", httpSession.getId());

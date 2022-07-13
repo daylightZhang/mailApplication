@@ -4,6 +4,14 @@ spring:
     username: root
     password: zjk102917
     url: jdbc:mysql://127.0.0.1:13306/mall?characterEncoding=utf-8&useSSL=False&serverTimezone=UTC
+  rabbitmq:
+    addresses: 172.17.0.1
+    port: 5672
+    username: guest
+    password: guest
+  redis:
+    host: 172.17.0.1
+    port: 6379
 
 mybatis:
   configuration:
@@ -17,3 +25,4 @@ server:
   servlet:
     session:
       timeout: 120
+  port: 8081

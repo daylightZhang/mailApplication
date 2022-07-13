@@ -9,7 +9,7 @@ public class UserRegisterForm {
     //@NotBlank // 用于String判断空格
     //@NotEmpty // 用于集合
     //@NotNull  // 用于值为null
-    @NotBlank()
+    @NotBlank
     private String username;
     @NotBlank
     private String password;

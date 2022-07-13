@@ -15,7 +15,7 @@ public class UserLoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         log.info("preHandle...");
         User user = (User) request.getSession().getAttribute(MallConst.CURRENT_USER);
-        if (user != null) {
+        if (user == null) {
             log.info("user=null");
             throw new UserLoginException();
             //return ResponseVo.error(ResponseEnum.NEED_LOGIN);
